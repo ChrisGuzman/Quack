@@ -22,7 +22,7 @@
             tools:text="This is a test"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
@@ -30,9 +30,10 @@
 
             <EditText
                 android:id="@+id/edit_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Test the echo!"
+                android:layout_weight="10"
+                android:hint="All your friends are here"
                 />
 
             <Button

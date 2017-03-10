@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private WebSocket ws;
 
     private final class EchoWebSocketListener extends WebSocketListener {
-        private static final int NORMAL_CLOSURE_STATUS = 1000;
-
         @Override
         public void onOpen(WebSocket webSocket, Response response) {
         }
@@ -33,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         public void onMessage(WebSocket webSocket, String text) {
             updateEchoTxt(text);
         }
-
 
         @Override
         public void onMessage(WebSocket webSocket, ByteString bytes) {
