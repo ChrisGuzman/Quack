@@ -41,6 +41,12 @@
                 android:layout_height="wrap_content"
                 android:text="Send" />
 
+            <Button
+                android:id="@+id/next_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Act"/>
+
         </LinearLayout>
 
     </RelativeLayout>

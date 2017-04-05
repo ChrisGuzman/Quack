@@ -13,32 +13,40 @@ import okio.ByteString;
 
 public class EchoWebSocketListener extends WebSocketListener {
     private static final String TAG = "WS";
-    ShowWebSocketMessage showWebSocketMessage;
+    WebSocketMessageHandler webSocketMessageHandler;
+
+    public EchoWebSocketListener(WebSocketMessageHandler webSocketMessageHandler) {
+        this.webSocketMessageHandler = webSocketMessageHandler;
+    }
 
     @Override
     public void onOpen(WebSocket webSocket, Response response) {
-
+        Log.d(TAG, "onOpen: ");
     }
 
     @Override
     public void onMessage(WebSocket webSocket, String text) {
         Log.d(TAG, "onMessage: " + text);
-        showWebSocketMessage.showMessage(text);
+        webSocketMessageHandler.onMessageReceived(text);
     }
 
     @Override
     public void onMessage(WebSocket webSocket, ByteString bytes) {
+        Log.d(TAG, "onMessage: ");
     }
 
     @Override
     public void onClosing(WebSocket webSocket, int code, String reason) {
+        Log.d(TAG, "onClosing: ");
     }
 
     @Override
     public void onClosed(WebSocket webSocket, int code, String reason) {
+        Log.d(TAG, "onClosed: ");
     }
 
     @Override
     public void onFailure(WebSocket webSocket, Throwable t, Response response) {
+        Log.e(TAG, "onFailure: ", t);
     }
 }
