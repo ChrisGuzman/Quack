@@ -9,8 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="300dp"
-        >
+        android:paddingTop="300dp">
 
         <TextView
             android:id="@+id/echo_text"
@@ -40,8 +39,7 @@
                 android:id="@+id/send_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Send"
-                />
+                android:text="Send" />
 
         </LinearLayout>
 
