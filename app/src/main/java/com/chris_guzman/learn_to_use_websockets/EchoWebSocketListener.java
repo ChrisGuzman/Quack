@@ -32,7 +32,8 @@ public class EchoWebSocketListener extends WebSocketListener {
 
     @Override
     public void onMessage(WebSocket webSocket, ByteString bytes) {
-        Log.d(TAG, "onMessage: ");
+        Log.d(TAG, "onMessage: " + bytes.toString());
+        webSocketMessageHandler.onBytesReceived(bytes);
     }
 
     @Override
@@ -47,6 +48,6 @@ public class EchoWebSocketListener extends WebSocketListener {
 
     @Override
     public void onFailure(WebSocket webSocket, Throwable t, Response response) {
-        Log.e(TAG, "onFailure: ", t);
+        Log.e(TAG, "onFailure: " + response.toString(), t);
     }
 }

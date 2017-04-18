@@ -9,10 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import okhttp3.WebSocket;
+import okio.ByteString;
 
 public class SecondActivity extends AppCompatActivity implements ShowInActivityHandler {
     private static final String TAG = "WS";
-    private WebSocket ws;
     private TextView chatTxt;
     private Button sendMsgBtn;
     private EditText msgEditTxt;
@@ -22,8 +22,7 @@ public class SecondActivity extends AppCompatActivity implements ShowInActivityH
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        OkHttpUtil.getInstance().setShowInActivityHandler(this);
-        ws = OkHttpUtil.getInstance().getWs();
+        OkHttpUtil.getInstance().getWs();
 
         chatTxt = (TextView) findViewById(R.id.chat_txt);
         msgEditTxt = (EditText) findViewById(R.id.msg_edit_txt);
@@ -31,12 +30,16 @@ public class SecondActivity extends AppCompatActivity implements ShowInActivityH
         sendMsgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ws.send(msgEditTxt.getText().toString());
+                OkHttpUtil.getInstance().getWs().send(msgEditTxt.getText().toString());
                 msgEditTxt.setText(null);
             }
         });
+    }
 
-        ws.send("Hey from Activity #2");
+    @Override
+    protected void onStart() {
+        super.onStart();
+        OkHttpUtil.getInstance().setShowInActivityHandler(this);
     }
 
     @Override
@@ -48,5 +51,10 @@ public class SecondActivity extends AppCompatActivity implements ShowInActivityH
                 chatTxt.setText(chatTxt.getText().toString() + "\n" + text );
             }
         });
+    }
+
+    @Override
+    public void showImage(ByteString bytes) {
+
     }
 }

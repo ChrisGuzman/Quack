@@ -25,4 +25,12 @@ public class WebSocketApplication extends Application {
         Log.d(TAG, "onCreate: started");
         OkHttpUtil.getInstance().init();
     }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        Log.d(TAG, "onTrimMemory: ");
+        OkHttpUtil.getInstance().getWs().close(1000, "App backgrounded");
+        OkHttpUtil.getInstance().setWs(null);
+    }
 }

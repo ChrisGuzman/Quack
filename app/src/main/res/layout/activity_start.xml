@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="com.chris_guzman.learn_to_use_websockets.StartActivity">
+
+    <Button
+        android:id="@+id/okhttp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OkHttp"/>
+
+    <Button
+        android:id="@+id/pubnub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pubnub"/>
+
+    <Button
+        android:id="@+id/pusher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pusher"/>
+
+    <Button
+        android:id="@+id/koush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Async"/>
+    <Button
+        android:id="@+id/nate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Java Websocket"/>
+
+</LinearLayout>

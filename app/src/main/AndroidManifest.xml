@@ -12,14 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".OkHttpActivity" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".PubNubActivity" />
+        <activity android:name=".PusherActivity" />
+        <activity android:name=".KoushActivity" />
+        <activity android:name=".NateActivity"></activity>
     </application>
 
 </manifest>

@@ -3,27 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chris_guzman.learn_to_use_websockets.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.chris_guzman.learn_to_use_websockets.OkHttpActivity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="300dp">
+        android:paddingTop="200dp">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            tools:src="@mipmap/ic_launcher_round" />
 
         <TextView
             android:id="@+id/echo_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/iv"
             android:textSize="20sp"
             android:background="@drawable/speech_bubble"
             tools:text="This is a test"/>
 
         <LinearLayout
+            android:id="@+id/text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/next_act"
             android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
@@ -42,13 +51,22 @@
                 android:text="Send" />
 
             <Button
-                android:id="@+id/next_act"
+                android:id="@+id/send_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Next Act"/>
+                android:text="Send Img"/>
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/next_act"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="New Chat"/>
+
     </RelativeLayout>
+
+
 
 </FrameLayout>
