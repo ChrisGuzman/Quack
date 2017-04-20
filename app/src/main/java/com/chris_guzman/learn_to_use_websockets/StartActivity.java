@@ -18,6 +18,7 @@ public class StartActivity extends AppCompatActivity {
         Button pusher = (Button) findViewById(R.id.pusher);
         Button koush = (Button) findViewById(R.id.koush);
         Button nate = (Button) findViewById(R.id.nate);
+        Button bus = (Button) findViewById(R.id.bus);
 
         okhttp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,13 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(StartActivity.this, NateActivity.class));
+            }
+        });
+
+        bus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StartActivity.this, BusActivity.class));
             }
         });
 

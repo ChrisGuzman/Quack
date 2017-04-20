@@ -16,6 +16,13 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/send_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                tools:text="Here's a chat \nThere's a chat \nEverywhere's a chat-chat"/>
+
+            <TextView
                 android:id="@+id/chat_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

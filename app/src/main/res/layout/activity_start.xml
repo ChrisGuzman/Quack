@@ -30,10 +30,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Android Async"/>
+
     <Button
         android:id="@+id/nate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Java Websocket"/>
+
+    <Button
+        android:id="@+id/bus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Bus"/>
 
 </LinearLayout>

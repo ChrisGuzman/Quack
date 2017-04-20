@@ -16,6 +16,7 @@ public class SecondActivity extends AppCompatActivity implements ShowInActivityH
     private TextView chatTxt;
     private Button sendMsgBtn;
     private EditText msgEditTxt;
+    private TextView sendTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,13 @@ public class SecondActivity extends AppCompatActivity implements ShowInActivityH
 
         chatTxt = (TextView) findViewById(R.id.chat_txt);
         msgEditTxt = (EditText) findViewById(R.id.msg_edit_txt);
+        sendTxt = (TextView) findViewById(R.id.send_txt);
         sendMsgBtn = (Button) findViewById(R.id.send_msg_btn);
         sendMsgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 OkHttpUtil.getInstance().getWs().send(msgEditTxt.getText().toString());
+                sendTxt.setText(msgEditTxt.getText().toString());
                 msgEditTxt.setText(null);
             }
         });

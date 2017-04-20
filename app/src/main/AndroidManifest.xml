@@ -7,9 +7,9 @@
     <application
         android:name=".WebSocketApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_quack"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_quack"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".OkHttpActivity" />
@@ -24,7 +24,8 @@
         <activity android:name=".PubNubActivity" />
         <activity android:name=".PusherActivity" />
         <activity android:name=".KoushActivity" />
-        <activity android:name=".NateActivity"></activity>
+        <activity android:name=".NateActivity" />
+        <activity android:name=".BusActivity"></activity>
     </application>
 
 </manifest>

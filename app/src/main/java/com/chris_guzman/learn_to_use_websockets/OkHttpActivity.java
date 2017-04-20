@@ -63,7 +63,7 @@ public class OkHttpActivity extends AppCompatActivity implements ShowInActivityH
         sendImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Drawable dr = getDrawable(R.mipmap.ic_launcher_round);
+                Drawable dr = getDrawable(R.mipmap.ic_quack);
                 if (dr != null) {
                     Bitmap bitmap = ((BitmapDrawable) dr).getBitmap();
                     ByteArrayOutputStream stream = new ByteArrayOutputStream();
